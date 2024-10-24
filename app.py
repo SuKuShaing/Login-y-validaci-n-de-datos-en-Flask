@@ -1,8 +1,6 @@
 from flask import Flask, render_template, redirect, request, Response, session
 from flask_mysqldb import MySQL, MySQLdb
-# este tutorial falla en esto
-# MySQLdb.OperationalError: (2026, 'TLS/SSL error: SSL is required, but the server does not support it')
-# y no he podido superarlo
+
 
 app = Flask(__name__, template_folder='templates')
 
