@@ -45,8 +45,7 @@ def login():
 
             return render_template("admin.html")
         else:
-            return render_template('index.html')
-
+            return render_template('index.html', mensaje="Usuario Inconrrecto")
 
     return render_template('admin.html')
 
