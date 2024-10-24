@@ -31,12 +31,12 @@ def admin():
 # Función de Login
 @app.route('/acceso-login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST' and 'txtCorreo' in request.form and 'txtPassword':
+    if request.method == 'POST' and 'txtCorreo' in request.form and 'txtPassword' in request.form:
         _correo = request.form['txtCorreo']
         _password = request.form['txtPassword']
 
         cur = mysql.connection.cursor()
-        cur.execute('SELECT * FROM usuario WHERE correo = %s AND password = %s', (_correo, _password,))
+        cur.execute('SELECT * FROM usuarios WHERE correo = %s AND password = %s', (_correo, _password,))
         account = cur.fetchone()
         
         if account:
