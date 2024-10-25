@@ -1,3 +1,67 @@
+-- Versión nueva construida bien desde el principio
+
+-- 1. Crear la base de datos
+CREATE DATABASE IF NOT EXISTS login
+CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci;
+
+-- 2. Seleccionar la base de datos
+USE login;
+
+-- 3. Crear la tabla 'roles'
+CREATE TABLE IF NOT EXISTS `roles` (
+    `id_rol` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+    `descripcion` VARCHAR(255) NOT NULL,
+    `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id_rol`)
+) ENGINE=InnoDB;
+
+-- 4. Crear la tabla 'usuarios'
+CREATE TABLE IF NOT EXISTS `usuarios` (
+    `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+    `correo` VARCHAR(100) NOT NULL UNIQUE,
+    `password` VARCHAR(255) NOT NULL,
+    `id_rol` INT(10) UNSIGNED NOT NULL,
+    `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`),
+    CONSTRAINT `fk_usuarios_roles`
+        FOREIGN KEY (`id_rol`) REFERENCES `roles` (`id_rol`)
+        ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+-- 5. Insertar datos en la tabla 'roles'
+INSERT INTO `roles` (`descripcion`) VALUES
+('admin'),
+('usuario');
+
+-- 6. Insertar datos en la tabla 'usuarios'
+INSERT INTO `usuarios` (`correo`, `password`, `id_rol`) VALUES
+('seba@seba.cl', '123456', 1),
+('maca@maca.cl', 'qwerty', 2);
+
+-- 7. Verificar las llaves foráneas y relaciones
+SELECT 
+    TABLE_NAME, 
+    COLUMN_NAME, 
+    CONSTRAINT_NAME, 
+    REFERENCED_TABLE_NAME, 
+    REFERENCED_COLUMN_NAME
+FROM 
+    INFORMATION_SCHEMA.KEY_COLUMN_USAGE
+WHERE 
+    TABLE_SCHEMA = 'login' 
+    AND TABLE_NAME = 'usuarios'
+    AND REFERENCED_TABLE_NAME IS NOT NULL;
+
+
+
+-------------------------------------------------------------
+
+-- Versión anterior cuando la construí parte por parte
+
+
 CREATE DATABASE login;
 
 USE login;
