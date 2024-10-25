@@ -40,12 +40,14 @@ def login():
         if account:
             session['loggeado'] = True
             session['id'] = account['id']
+            session['id_rol'] = account['id_rol']
 
-            return render_template("admin.html")
+            if session['id_rol'] == 1:
+                return render_template("admin.html")
+            elif session['id_rol'] == 2:
+                return render_template("usuarioComun.html")
         else:
             return render_template('index.html', mensaje="Usuario Inconrrecto")
-
-    return render_template('admin.html')
 
 
 if __name__ == '__main__':

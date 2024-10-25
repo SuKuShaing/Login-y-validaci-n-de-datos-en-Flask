@@ -1,9 +1,11 @@
 # Como hacer un Login (Validación de datos) con PYTHON FLASK y MySQL
 
 Siguiendo el tutorial de GABRIEL HDS
+Como hacer un Login (Validación de datos) con PYTHON FLASK y MySQL #python #mysql #flask
 https://youtu.be/QO4lBskfH7w?si=ZWnY-73Isft2iRqu
 
 2da parte del tutorial
+Como hacer un Login con Roles, Privilegios de Usuario (Multi-Usuario) en Python Flask y MySQL
 https://youtu.be/pkotA0tvewQ?si=OCLUW84bpqurbskQ
 
 
