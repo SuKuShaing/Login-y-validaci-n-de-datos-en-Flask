@@ -1,6 +1,6 @@
-{% extends 'layout.html' %}
+{% extends 'layout.html' %} 
 
-{% block title %}Home{% endblock %}
+{% block title %}Home{% endblock %} 
 
 {% block body %}
 <div class="d-flex align-items-center py-4 bg-body-tertiary">
@@ -8,6 +8,16 @@
 		<form action="acceso-login" method="post">
 			<!-- action="acceso-login" define la URL a la que se enviarán los datos del formulario cuando se haga clic en el botón de envío -->
 			<h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+			{% with messages = get_flashed_messages() %} 
+				{% if messages %}
+				<ul>
+					{% for message in messages %}
+					<div class="alert alert-success" role="alert">{{ message }}</div>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			{% endwith %}
 
 			{% if mensaje %}
 			<div class="alert alert-warning" role="alert">{{ mensaje }}</div>

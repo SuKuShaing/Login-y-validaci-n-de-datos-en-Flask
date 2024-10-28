@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, Response, session
+from flask import Flask, render_template, redirect, request, Response, session, flash
 from flask_mysqldb import MySQL, MySQLdb
 
 
@@ -87,6 +87,7 @@ def crear_registro():
     )
     mysql.connection.commit()
 
+    flash("Usuario creado exitosamente!")
     return redirect("/")
 
 
