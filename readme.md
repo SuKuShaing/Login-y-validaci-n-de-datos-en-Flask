@@ -8,6 +8,10 @@ https://youtu.be/QO4lBskfH7w?si=ZWnY-73Isft2iRqu
 Como hacer un Login con Roles, Privilegios de Usuario (Multi-Usuario) en Python Flask y MySQL
 https://youtu.be/pkotA0tvewQ?si=OCLUW84bpqurbskQ
 
+3ra parte del tutorial
+Como hacer Registros de Usuarios en Python Flask y Mysql (Rápido y Sencillo) #mysql #flask #python
+https://youtu.be/lG8PdSe45rE?si=gXaXGJ24sQT5cz7f
+
 
 
 

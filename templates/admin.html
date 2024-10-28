@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entraste</title>
-</head>
-<body>
+{% extends 'layout.html' %}
+
+{% block title %}Entraste Admin{% endblock %}
+
+{% block body %}
     <h1>Bienvenido, Admin!</h1>
     <a href="/logout">Salir</a>
-</body>
-</html>
+{% endblock %}
