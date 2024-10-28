@@ -91,6 +91,17 @@ def crear_registro():
     return redirect("/")
 
 
+# Listar usuarios
+@app.route("/listar", methods=["GET", "POST"])
+def listar():
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM usuarios")
+    usuarios = cur.fetchall()
+    cur.close()
+
+    return render_template("listar_usuario.html", usuarios=usuarios)
+
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000, threaded=True)
     # "threaded = True" habilita el manejo de solicitudes concurrentes mediante subprocesos.

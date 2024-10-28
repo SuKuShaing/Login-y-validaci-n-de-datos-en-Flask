@@ -4,13 +4,17 @@ Siguiendo el tutorial de GABRIEL HDS
 Como hacer un Login (Validación de datos) con PYTHON FLASK y MySQL #python #mysql #flask
 https://youtu.be/QO4lBskfH7w?si=ZWnY-73Isft2iRqu
 
-2da parte del tutorial
+2da parte,
 Como hacer un Login con Roles, Privilegios de Usuario (Multi-Usuario) en Python Flask y MySQL
 https://youtu.be/pkotA0tvewQ?si=OCLUW84bpqurbskQ
 
-3ra parte del tutorial
+3ra parte,
 Como hacer Registros de Usuarios en Python Flask y Mysql (Rápido y Sencillo) #mysql #flask #python
 https://youtu.be/lG8PdSe45rE?si=gXaXGJ24sQT5cz7f
+
+4ta parte,
+Como Listar, Mostrar Registros de una Base de Datos en Python Flask y Mysql #python #mysql #flask
+https://youtu.be/aeNvDLX3iZA?si=3rBRFQ2uqsJph13V
 
 
 
